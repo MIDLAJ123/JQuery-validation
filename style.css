@@ -1,0 +1,83 @@
+body{
+    background-color: #f4f8fa;
+}
+
+.body1{
+    position: relative;
+    width: 800px;
+    height: 220vh;
+    background-color: white;
+    top: 30px;
+    box-shadow: 5px 5px 20px  #c4c1c1;
+}
+
+.text{
+    box-sizing: border-box;
+}
+.text1{
+    font-size: 18px;
+    font-family: Helvetica, Arial, sans-serif;
+    position: relative;
+    top: 30px;
+    margin-right: 35%;
+}
+.input-control{
+    position: relative;
+    top: 40px;
+}
+.fn{
+    margin-right: 280px;
+}
+.ln{
+     margin-right: 280px;
+}
+.em{
+     margin-right: 320px;
+}
+.psd{
+     margin-right: 280px;
+}
+.plots{
+     margin-right: 179px;
+}
+.lr{
+     margin-right: 40px;
+}
+.sm{
+     margin-right: 4px;
+}
+.mm{
+     margin-right: 170px;
+}
+.btn{
+     margin-right: 662px;
+}
+
+.input-error {
+     border: 2px solid red !important;
+}
+
+#error1{
+     margin-right: 190px;
+}
+#error2{
+     margin-right: 190px;
+}
+#error3{
+     margin-right: 190px;
+}
+#error4{
+     margin-right: 190px;
+}
+#error5{
+     margin-right: 110px;
+}
+#error6{
+     margin-right: 110px;
+}
+#error7{
+     margin-right: 110px;
+}
+#error8{
+     margin-right: 110px;
+}

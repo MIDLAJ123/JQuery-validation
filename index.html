@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+<center> 
+    <div class="body1">
+        <div class="img">
+            <img src="photo/Do you have your Plot Ready (7)-min.png" alt="photo" class="img-fluid">
+        </div>
+         <div class="text">
+            <h1 class="text1"><span>Fill in your details & start constructing your dream home</span></h1>
+         </div>
+         <div class="input-control">
+            <form class="row g-3 ms-3 me-4 mt-4">
+                <div class="col-md-6">
+                  <label for="inputEmail4" class="form-label fn">First Name</label>
+                  <input type="email" class="form-control" id="first_name">
+                  <label id="error1" style="display: none; color: red;  font-size: 11px; font-family: Arial, Helvetica, sans-serif;">Please complete this required field.</label>
+                </div>
+                <div class="col-md-6">
+                  <label for="inputPassword4" class="form-label ln">Last Name</label>
+                  <input type="password" class="form-control" id="last_name">
+                  <label id="error2" style="display: none; color: red;  font-size: 11px; font-family: Arial, Helvetica, sans-serif;">Please complete this required field.</label>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label em">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4">
+                    <label id="error3" style="display: none; color: red;  font-size: 11px; font-family: Arial, Helvetica, sans-serif;">Please complete this required field.</label>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label psd">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4">
+                    <label id="error4" style="display: none; color: red;  font-size: 11px; font-family: Arial, Helvetica, sans-serif;">Please complete this required field.</label>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="inputState" class="form-label plots">Do you have/own a plot?</label>
+                    <select id="inputState" class="form-select">
+                      <option selected>Choose...</option>
+                      <option>Yes</option>
+                      <option>No</option>
+                    </select>
+                    <label id="error5" style="display: none; color: red;  font-size: 11px; font-family: Arial, Helvetica, sans-serif;">Please select an option from the dropdown menu.</label>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="inputState" class="form-label lr" >Where are you planning to build your home?</label>
+                    <select id="inputState1" class="form-select">
+                      <option selected>Choose...</option>
+                      <option>Kerala</option>
+                      <option>Thelangana</option>
+                      <option>karnadaka</option>
+                      <option>Tamil Nadu</option>
+                    </select>
+                    <label id="error6" style="display: none; color: red;  font-size: 11px; font-family: Arial, Helvetica, sans-serif;">Please select an option from the dropdown menu.</label>
+                  </div>
+                     
+                  <div class="col-md-6">
+                    <label for="inputState" class="form-label sm">When are you planning to start your construction?</label>
+                    <select id="inputState2" class="form-select">
+                      <option selected>Choose...</option>
+                      <option>Immediately</option>
+                      <option>In 3 Months</option>
+                      <option>In 6 Months</option>
+                      <option>More than 6 Months</option>
+                    </select>
+                    <label id="error7" style="display: none; color: red;  font-size: 11px; font-family: Arial, Helvetica, sans-serif;">Please select an option from the dropdown menu.</label>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="inputState" class="form-label mm">Choose your budget range</label>
+                    <select id="inputState3" class="form-select">
+                      <option selected>Choose...</option>
+                      <option>40-75 Lakhs </option>
+                      <option>75 Lakhs -1 Crore </option>
+                      <option>1 Crore & Above</option>
+                    </select>
+                    <label id="error8" style="display: none; color: red;  font-size: 11px; font-family: Arial, Helvetica, sans-serif;">Please select an option from the dropdown menu.</label>
+                  </div>
+                <div class="col-12">
+                  <button type="button" id="btns" class="btn btn-secondary">Submit</button>
+                </div> 
+              </form>
+         </div>
+    </div>
+</center>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+    <script>
+            $(document).ready(function() {
+            $("#first_name").blur(function() {
+                let text = $(this).val();
+                if (text.length < 5) {
+                    $(this).css('border-color','red');
+                    $("#error1").show();
+                } else {
+                    $("#error1").hide();
+                    $(this).css('border-color','#6bb4ee')
+                }
+            });
+
+            $("#last_name").blur(function() {
+                let num = $(this).val();
+                if (num.length < 5) {
+                    $(this).css('border-color','red');
+                    $("#error2").show();
+                } else {
+                    $("#error2").hide();
+                    $(this).css('border-color','#6bb4ee')
+                }
+            });
+            $("#inputEmail4").blur(function() {
+                let num = $(this).val();
+                if (num.length < 6) {
+                    $(this).css('border-color','red');
+                    $("#error3").show();
+                } else {
+                    $(this).css('border-color','#6bb4ee')
+                    $("#error3").hide();
+                }
+            });
+            $("#inputPassword4").blur(function() {
+                let num = $(this).val();
+                if (num.length < 8) {
+                    $(this).css('border-color','red');
+                    $("#error4").show();
+                } else {
+                    $(this).css('border-color','#6bb4ee')
+                    $("#error4").hide();
+                }
+            });
+            $("#inputState").blur(function() {
+                let num = $(this).val();
+                if (num.length < 2) {
+                    $(this).css('border-color','red');
+                    $("#error5").show();
+                } else {
+                    $(this).css('border-color','#6bb4ee')
+                    $("#error5").hide();
+                }
+            });
+            $("#inputState1").blur(function() {
+                let num = $(this).val();
+                if (num.length < 5) {
+                    $(this).css('border-color','red');
+                    $("#error6").show();
+                } else {
+                    $("#error6").hide();
+                    $(this).css('border-color','#6bb4ee')
+                }
+            });
+            $("#inputState2").blur(function() {
+                let num = $(this).val();
+                if (num.length < 5) {
+                    $(this).css('border-color','red');
+                    $("#error7").show();
+                } else {
+                    $(this).css('border-color','#6bb4ee')
+                    $("#error7").hide();
+                }
+            });
+            $("#inputState3").blur(function() {
+                let num = $(this).val();
+                if (num.length < 5) {
+                    $(this).css('border-color','red');
+                    $("#error8").show();
+                } else {
+                    $(this).css('border-color','#6bb4ee')
+                    $("#error8").hide();
+                }
+            });
+            $("#btns").click(function() {
+                let ab = $("#first_name").val();
+                let ac = $("#last_name").val();
+                let ad = $("#inputEmail4").val();
+                let ae = $("#inputPassword4").val();
+                let af = $("#inputState").val();
+                let ag = $("#inputState1").val();
+                let as = $("#inputState2").val();
+                let ak = $("#inputState3").val();
+
+                if( ab ===""|| ab.length <5 || ac ==="" || ac.length <5 || ad ==="" || ad.length <6 || ae ===""|| ae.length < 8 || af ==='please select' || ag ==='please select' || as ==='please select' || ak ==='please select' ){
+                    
+                    $("#error1").show();
+                    $("#error2").show();
+                    $("#error3").show();
+                    $("#error4").show();
+                    $("#error5").show();
+                    $("#error6").show();
+                    $("#error7").show();
+                    $("#error8").show();
+                    $("#first_name").css('border-color','red');
+                    $("#last_name").css('border-color','red');
+                    $("#inputEmail4").css('border-color','red');
+                    $("#inputPassword4").css('border-color','red');
+                    $("#inputState").css('border-color','red');
+                    $("#inputState1").css('border-color','red');
+                    $("#inputState2").css('border-color','red');
+                    $("#inputState3").css('border-color','red');
+
+                     
+                }
+                else{
+                    $("#first_name").css('border-color','#6bb4ee');
+                    $("#last_name").css('border-color','#6bb4ee');
+                    $("#inputEmail4").css('border-color','#6bb4ee');
+                    $("#inputPassword4").css('border-color','#6bb4ee');
+                    $("#inputState").css('border-color','#6bb4ee');
+                    $("#inputState1").css('border-color','#6bb4ee');
+                    $("#inputState2").css('border-color','#6bb4ee');
+                    $("#inputState3").css('border-color','#6bb4ee');
+
+
+                    swal.fire({
+                    icon: 'success',
+                    title: 'Submitted successfully',
+                     
+            });
+                }
+                
+            });
+          })
+    </script>
+</html>
